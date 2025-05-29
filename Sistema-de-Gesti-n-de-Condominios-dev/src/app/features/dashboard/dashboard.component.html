@@ -1,0 +1,12 @@
+<div class="dashboard-container">
+  @if (userRole === 'admin') {
+    <app-admin-dashboard></app-admin-dashboard>
+  } @else if (userRole === 'residente') {
+    <app-resident-dashboard></app-resident-dashboard>
+  } @else {
+    <div class="role-error">
+      <h2>Error de configuración de rol</h2>
+      <p>Contacta al administrador del sistema</p>
+    </div>
+  }
+</div>
